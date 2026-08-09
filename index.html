@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bhagyalakshmi | Frontend Developer</title>
+
+    <!-- Font Awesome Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      /* =========================
+       RESET
+    ========================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* =========================
+       BODY
+    ========================= */
+
+      body {
+        background: linear-gradient(135deg, #c9cfeb, #d8c6e9);
+
+        color: #333;
+      }
+
+      /* =========================
+       CONTAINER
+    ========================= */
+
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      /* =========================
+       HEADER
+    ========================= */
+
+      header {
+        text-align: center;
+
+        padding: 40px 20px;
+
+        color: rgb(0, 0, 0);
+      }
+
+      /* Profile Image */
+
+      .profile-img {
+        width: 180px;
+        height: 180px;
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        border: 5px solid white;
+
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      /* Name */
+
+      header h1 {
+        margin-top: 15px;
+
+        font-size: 40px;
+      }
+
+      /* Job Title */
+
+      header p {
+        font-size: 20px;
+
+        margin-top: 10px;
+      }
+
+      /* =========================
+       SOCIAL LINKS
+    ========================= */
+
+      .social-links {
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 15px;
+
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        background: white;
+
+        color: #667eea;
+
+        border-radius: 50%;
+
+        text-decoration: none;
+
+        font-size: 22px;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+        transition: 0.3s;
+      }
+
+      .social-links a:hover {
+        transform: translateY(-5px) scale(1.05);
+
+        background: #667eea;
+
+        color: white;
+
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+      }
+
+      /* LinkedIn */
+
+      .social-links a:first-child:hover {
+        background: #0a66c2;
+      }
+
+      /* GitHub */
+
+      .social-links a:last-child:hover {
+        background: #181717;
+      }
+
+      /* =========================
+       BUTTON
+    ========================= */
+
+      .btn {
+        display: inline-block;
+
+        margin: 10px;
+
+        padding: 12px 25px;
+
+        background: white;
+
+        color: #333;
+
+        text-decoration: none;
+
+        border-radius: 25px;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      /* =========================
+       SECTIONS
+    ========================= */
+
+      section {
+        background: white;
+
+        padding: 25px;
+
+        margin: 20px 0;
+
+        border-radius: 15px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Section Heading */
+
+      section h2 {
+        margin-bottom: 20px;
+
+        color: #8094f0;
+      }
+
+      /* =========================
+       ABOUT
+    ========================= */
+
+      section p {
+        line-height: 1.7;
+      }
+
+      /* =========================
+       SKILLS
+    ========================= */
+
+      .skills {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+      }
+
+      .skill {
+        background: #667eea;
+
+        color: white;
+
+        padding: 10px 20px;
+
+        border-radius: 25px;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+      }
+
+      .skill:hover {
+        transform: translateY(-3px);
+
+        background: #764ba2;
+      }
+
+      /* =========================
+       PROJECTS
+    ========================= */
+
+      .projects {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 20px;
+      }
+
+      .project-card {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+
+        color: white;
+
+        padding: 20px;
+
+        border-radius: 15px;
+
+        transition: 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .project-card p {
+        line-height: 1.6;
+      }
+
+      /* =========================
+       CONTACT
+    ========================= */
+
+      .contact p {
+        margin: 10px 0;
+
+        font-size: 18px;
+      }
+
+      .contact p i {
+        color: #667eea;
+
+        width: 25px;
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      footer {
+        text-align: center;
+
+        padding: 20px;
+
+        color: rgb(0, 0, 0);
+
+        font-size: 18px;
+      }
+
+      /* =========================
+       RESPONSIVE DESIGN
+    ========================= */
+
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 92%;
+        }
+
+        header {
+          padding: 30px 10px;
+        }
+
+        .profile-img {
+          width: 140px;
+          height: 140px;
+        }
+
+        header h1 {
+          font-size: 30px;
+        }
+
+        header p {
+          font-size: 17px;
+        }
+
+        section {
+          padding: 20px;
+        }
+
+        .skills {
+          gap: 10px;
+        }
+
+        .skill {
+          padding: 8px 15px;
+
+          font-size: 14px;
+        }
+
+        .projects {
+          grid-template-columns: 1fr;
+        }
+
+        .contact p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =========================
+         HEADER
+    ========================= -->
+
+      <header>
+        <!-- Profile Image -->
+
+        <img
+          src="Screenshot 2026-06-23 100542.png"
+          alt="Bhagyalakshmi"
+          class="profile-img"
+        />
+
+        <!-- Name -->
+
+        <h1>Bhagyalakshmi</h1>
+
+        <!-- Job Title -->
+
+        <p>Frontend Developer</p>
+
+        <!-- =========================
+           SOCIAL LINKS
+      ========================= -->
+
+        <div class="social-links">
+          <!-- LinkedIn -->
+
+          <a
+            href="https://www.linkedin.com/in/bhagya-lakshmi-subramaniyan-2985673a2/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <!-- GitHub -->
+
+          <a
+            href="https://github.com/bhagyalakshmis496-cell"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </header>
+
+      <!-- =========================
+         ABOUT ME
+    ========================= -->
+
+      <section>
+        <h2>About Me</h2>
+
+        <p>
+          I am a passionate Frontend Developer skilled in HTML5, CSS3,
+          JavaScript, Python, MySQL and Advanced Excel. I enjoy building
+          responsive and user-friendly web applications.
+        </p>
+      </section>
+
+      <!-- =========================
+         SKILLS
+    ========================= -->
+
+      <section>
+        <h2>Skills</h2>
+
+        <div class="skills">
+          <div class="skill">HTML5</div>
+
+          <div class="skill">CSS3</div>
+
+          <div class="skill">JavaScript</div>
+
+          <div class="skill">Python</div>
+
+          <div class="skill">MySQL</div>
+
+          <div class="skill">Advanced Excel</div>
+
+          <div class="skill">ChatGPT</div>
+        </div>
+      </section>
+
+      <!-- =========================
+         PROJECTS
+    ========================= -->
+
+      <section>
+        <h2>Projects</h2>
+
+        <div class="projects">
+          <!-- Project 1 -->
+
+          <div class="project-card">
+            <h3>Flipkart Clone Website</h3>
+
+            <p>
+              Developed a responsive e-commerce homepage using HTML5 and CSS3.
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+
+          <div class="project-card">
+            <h3>Login Page Design</h3>
+
+            <p>Created a modern responsive login page using HTML and CSS.</p>
+          </div>
+
+          <!-- Project 3 -->
+
+          <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+
+            <p>Built a portfolio website to showcase skills and projects.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         CONTACT
+    ========================= -->
+
+      <section class="contact">
+        <h2>Contact</h2>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+
+          bhagyalakshmi.s496@gmail.com
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+
+          +91 63797 23420
+        </p>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+
+          Tamil Nadu, India
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
